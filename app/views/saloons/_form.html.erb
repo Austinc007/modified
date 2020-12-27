@@ -1,0 +1,41 @@
+<%= form_with(model: saloon, local: true) do |form| %>
+  <% if saloon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(saloon.errors.count, "error") %> prohibited this saloon from being saved:</h2>
+
+      <ul>
+        <% saloon.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :name , class:"form-control",placeholder:'Name of saloon'%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :address , class:"form-control",placeholder:'Address of saloon'%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :opening_time , class:"form-control",placeholder:'Opening time'%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :closing_time , class:"form-control",placeholder:'Closing time'%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :services , class:"form-control",placeholder:'Services offered'%>
+  </div>
+
+  <div class="field form-group">
+    <%= form.text_field :contact , class:"form-control",placeholder:'Contact Number'%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-secondary" %>
+  </div>
+<% end %>

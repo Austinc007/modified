@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+  <h1 class="display-4"><%= @saloon.name %></h1>
+  <table class="table table table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">ADDRESS</th>
+      <th scope="col">OPENING TIME</th>
+      <th scope="col">CLOSING TIME</th>
+      <th scope="col">SERVICES</th>
+      <th scope="col">CONTACT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="col"><%= @saloon.address %></th>
+      <th scope="col"><%= @saloon.opening_time %></th>
+      <th scope="col"><%= @saloon.closing_time %></th>
+      <th scope="col"><%= @saloon.services %></th>
+      <th scope="col"><%= @saloon.contact %></th>
+    </tr>
+  </tbody>
+  </table>
+
+
+</br>
+</br>
+<% @saloon.inspect%>
+<%= link_to 'Edit', edit_saloon_path(@saloon), class:"btn btn-secondary" %>
+<%= link_to 'Back', saloons_path,class:"btn btn-secondary" %>
